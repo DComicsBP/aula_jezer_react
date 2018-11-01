@@ -1,0 +1,1484 @@
+<html>
+
+<head>
+ <title>Apresentação</title>
+ <meta charset="utf-8" />
+ <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
+ <link rel="stylesheet" href="slide/slide.css">
+ <script src="highlight/highlight.pack.js"></script>
+ <script>hljs.initHighlightingOnLoad();</script>
+ <script src="slide/slide.js"></script>
+ </script>
+
+ <style>
+  iframe {
+   border: none;
+  }
+
+  table {
+   font-family: arial, sans-serif;
+   border-collapse: collapse;
+  }
+
+  td,
+  th {
+   border: 1px solid #dddddd;
+   text-align: left;
+   padding: 8px;
+  }
+
+  tr:nth-child(even) {
+   background-color: #dddddd;
+  }
+
+  .exemplo td {
+   border: 1px solid;
+   width: 30px;
+   height: 30px;
+   padding: 0px;
+   background-color: #fff;
+  }
+
+  .exemplo table {
+   border-collapse: collapse;
+  }
+ </style>
+
+
+</head>
+
+<body onload="init()">
+
+ <slide class="capa">
+  <materia>Desenvolvimento de Sistemas I</materia>
+  <aula>React</aula>
+  <dados>
+   <b>Professor:</b> Jezer Machado de Oliveira
+   <br/>
+  </dados>
+ </slide>
+
+ <slide>
+  <titulo>O que é ?</titulo>
+  <texto>
+   <ul>
+    <li>Biblioteca javaScript para criação de interfaces</li>
+   </ul>
+  </texto>
+ </slide>
+
+ <slide>
+   <titulo>React</titulo>
+   <texto>
+    Principais características:
+     <ul>
+      <li>ES6</li>
+      <li>Declarativo</li>
+      <li>One-way data flow (Fluxo de dados unidirecional)</li>
+      <li>Focado em composição, não herança</li>
+      <li>Virtual DOM</li>
+      <li>JSX</li>
+     </ul>
+    </texto>
+  </slide>
+ 
+
+ <slide>
+  <titulo>React</titulo>
+  <texto>
+   Formado por:
+    <ul>
+     <li>Componentes</li>
+    </ul>
+   </texto>
+ </slide>
+
+ <slide>
+  <titulo>React</titulo>
+  <texto>
+   Formado por:
+    <ul>
+     <li>Componentes</li>
+     <li>Componentes</li>
+    </ul>
+   </texto>
+ </slide>
+
+ <slide>
+  <titulo>React</titulo>
+  <texto>
+   Formado por:
+    <ul>
+     <li>Componentes</li>
+     <li>Componentes</li>
+     <li>Componentes</li>
+    </ul>
+   </texto>
+ </slide>
+ <slide>
+  <titulo>React</titulo>
+  <texto>
+   Formado por:
+    <ul>
+     <li>Componentes</li>
+     <li>Componentes</li>
+     <li>Componentes</li>
+     <li>Componentes</li>
+    </ul>
+   </texto>
+ </slide>
+
+ <slide>
+  <titulo>React</titulo>
+  <texto>
+   Formado por:
+   
+    <ul>
+     <li>Componentes</li>
+     <li>Componentes</li>
+     <li>Componentes</li>
+     <li>Componentes</li>
+     <li>Componentes</li>
+    </ul>
+   </texto>
+ </slide>
+
+ <slide>
+  <titulo>React</titulo>
+  <texto>
+     Componente:
+    <ul>
+     <li>Focado em resolver um único problema</li>
+     <li>Elemento visual (UI)</li>
+     <li>Encapsulado</li>
+     <li>Gerencia seu próprio estado interno </li>
+     <li>Recebe dados de outros componentes por propriedades</li>
+     <li>Envia dados para outros componentes por eventos</li>
+     <li>O comportamento do componente é determinado pelo estado e suas propriedades</li>
+    </ul>
+   </texto>
+ </slide>
+
+
+<slide>
+<titulo>Componente</titulo>
+<texto style="padding-top:5px">
+Exemplo1.js 
+<pre><code class="JavaScript">import React, { Component } from &apos;react&apos;;
+import logo from &apos;./logo.svg&apos;;
+import &apos;../App.css&apos;;
+
+export default class Exemplo1 extends Component {
+ constructor(props) {
+  super(props);
+  this.state={texto:&quot;Classe Exemplo 1&quot;};
+  }
+
+  render() {
+  return (
+   &lt;div className=&quot;App&quot;&gt;
+    &lt;header className=&quot;App-header&quot;&gt;
+     &lt;img src={logo} className=&quot;App-logo&quot; alt=&quot;logo&quot; /&gt;
+    &lt;/header&gt;
+   &lt;/div&gt;
+  );
+ }
+}
+</code></pre>
+</texto>
+</slide>
+
+<slide>
+<titulo>import</titulo>
+<texto style="padding-top:5px">
+ Importa recursos para serem usados no componente 
+<pre><code class="JavaScript">// importa outros componentes 
+import React, { Component } from &apos;react&apos;;
+// importa recursos como imagens 
+import logo from &apos;./logo.svg&apos;;
+// importa folhas de estilos 
+import &apos;../App.css&apos;;
+
+//usar ... from &apos;nome&apos; quando for uma biblioteca instalada 
+//usar ... from &apos;./nome&apos; quando est&aacute; no mesmo diretório da classe
+//usar ... from &apos;../nome&apos; pra voltar um diretório 
+</code></pre><br/>
+Especificação do import ES6:<br/>
+<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/import">
+ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/import</a>
+</texto>
+</slide>
+  
+<slide>
+<titulo>Componente</titulo>
+<texto >
+Exemplo1.js 
+<pre><code class="JavaScript">//Declara a classe e exporta ela como elemento principal no módulo 
+export default class Exemplo1 extends Component {
+
+}
+</code></pre>
+<br/>
+Exemplo de utilização em outro componente:<br/><br/>
+<pre><code class="JavaScript">import Exemplo1 from '../subPasta/Exemplo1';
+</code></pre>
+</texto>
+</slide>
+  
+
+
+<slide>
+  <titulo>Componente</titulo>
+  <texto style="padding-top:5px">
+  <pre><code class="JavaScript">export default class Propriedade extends Component {
+    campo = 10;
+    constructor(props) {
+      super(props);
+      this.state = { texto: &quot;Classe Propriedade&quot; };
+    }
+.....</code></pre>
+props são recebidas por propriedades da tag na sua declaração e não podem ser alteradas pelo componente:<br/> 
+<pre><code class="HTML">&lt;Propriedade nome=&quot;João do Exemplo&quot; /&gt;</code></pre>
+equivale
+<pre><code class="JavaScript">this.props.nome="João do Exemplo";</code></pre>
+this.state - representa o estado do componente 
+</texto>
+</slide>
+
+<slide>
+<titulo>Componente</titulo>
+<texto style="padding-top:5px">
+<pre><code class="JavaScript">export default class Propriedade extends Component {
+....
+  render() {
+    let variavel = this.campo * 2;
+    return (
+      &lt;div&gt;
+        {this.state.texto} &lt;br /&gt;
+        valor do campo: {this.campo}&lt;br /&gt;
+        valor da vari&aacute;vel: {variavel} &lt;br /&gt;
+        valor da propriedade nome: {this.props.nome}
+      &lt;/div&gt;
+    );  }}
+</code></pre>
+render() - Método obrigatório, retorna a renderização do componente baseado em suas propriedades e estado
+</texto>
+</slide>
+
+
+<slide>
+ <titulo>JSX</titulo>
+ <texto style="padding-top:5px">
+JSX é um "açúcar sintático", ele torna possível escrever código em notação XML dentro de código JavaScript
+ <pre><code class="JavaScript">let elem = &lt;div&gt;
+   &lt;p&gt;Welcome to TutsPlus&lt;/p&gt;
+  &lt;/div&gt;;
+ </code></pre>
+ É equivalente:
+ <pre><code class="JavaScript">let elem = React.createElement(
+ "div",
+ null,
+ React.createElement(
+  "p",
+  null,
+  "Welcome to TutsPlus"
+ )
+);
+)</code></pre>
+ </texto>
+ </slide>
+
+
+
+<slide>
+ <titulo>JSX</titulo>
+ <texto style="padding-top:5px">
+REACT e JSX suportam todas as tags HTML5 nativas, não sendo necessário importa-lás  
+ <pre><code class="html">a, abbr, address, area, article, aside, audio, b, base, bdi, bdo,
+big, body, br, button, canvas, caption, cite, code, col, colgroup,
+data, datalist, dd, del, details, dfn, dialog, div, dl, dt, em,
+embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4,
+h5, h6, head, header, hgroup, hr, html, i, iframe, img, input, ins,
+kbd, keygen, label, legend, li, link, main, map, mark, menu,
+menuitem, meta, meter, nav, noscript, object, ol, optgroup, option,
+output, p, param, picture, pre, progress, q, rp, rt, ruby, s, samp,
+script, section, select, small, source, span, strong, style, sub,
+summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, 
+title, tr, track, u, ul, var, video, wbr, circle, clipPath, defs, 
+ellipse, g, image, line, linearGradient, mask, path, pattern, 
+polygon, polyline, radialGradient, rect, stop, svg, text, tspa
+ </code></pre>
+ </texto>
+</slide>
+
+
+
+
+
+ <slide>
+   <titulo>JSX</titulo>
+   <texto style="padding-top:5px">
+  Através das chaves ({}) é possível acessar atributos, variáveis, executar expressões e comandos no JSX
+   <pre><code class="JavaScript">class Exemplo extends Component {
+ a =10;
+ render() {
+  let b=2;
+  return &lt;div&gt;
+   soma de {this.a} + {b} =&lt;span&gt;{this.a+b}&lt;/span&gt;
+  &lt;/div&gt;;
+ }
+}</code></pre>
+Resulta em:
+<pre><code class="xml">soma de 10 + 2 =12</code></pre>
+   </texto>
+   </slide>
+
+<slide>
+  <titulo>JSX</titulo>
+  <texto style="padding-top:5px">
+ Propriedades podem ser tanto strings quanto objetos complexos 
+  <pre><code class="JavaScript">render() {
+ return &lt;Exemplo1 
+  propriedade=&quot;casa&quot;
+  numero={20} // chaves para valores diferentes de string
+  objeto={{   
+   // objetos precisam de duas chaves, uma para expressão,
+   // outra para o próprio objeto 
+   nome:"João",
+   sobrenome:&quot;do Exemplo&quot;
+  }}
+ /&gt;;</code></pre>
+  </texto>
+</slide>
+
+
+<slide>
+  <titulo>JSX</titulo>
+  <texto style="padding-top:5px">
+ Para acessar atributos nativos do HTML existem algumas peculiaridades 
+ <ul>
+   <li>Como regra geral, os atributos são escritos no estilo camelCase, 
+    usando como separador de palavras uma letra maiúscula. </li>
+    <ul>
+      <li>tabindex => tabIndex</li>
+      <li>colspan => colSpan</li>
+    </ul>
+   </ul>
+  </texto>
+</slide>
+
+<slide>
+ <titulo>JSX</titulo>
+ <texto style="padding-top:5px">
+Principais atributos nativos no JSX
+ <pre><code class="html">accept acceptCharset accessKey action allowFullScreen alt async
+autoComplete autoFocus autoPlay capture cellPadding cellSpacing
+challenge charSet checkedcite classID className colSpan cols 
+content contentEditable contextMenu controls controlsList coords 
+crossOrigin data dateTime default defer dir disabled download 
+draggable encType form formAction formEncType formMethod 
+formNoValidate formTarget frameBorder headers height hidden high 
+href hrefLang htmlFor httpEquiv icon id inputMode integrity is 
+keyParams keyType kind label lang list loop low manifest 
+marginHeight marginWidth max maxLength media mediaGroup method 
+min minLength multiple muted name noValidate nonce open optimum
+pattern placeholder poster preload profile radioGroup readOnly 
+rel required reversed role rowSpan rows sandbox scope scoped 
+scrolling seamless selected shape size sizes span spellCheck src
+srcDoc srcLang srcSet start step style summary tabIndex target 
+title type useMap value width wmode wrap</code></pre>
+ </texto>
+</slide>
+
+<slide>
+  <titulo>JSX</titulo>
+  <texto style="padding-top:5px">
+ O atributo style tem um tratamento especial no JSX, permitindo definir estilos "inline", 
+ através de um objeto
+ <pre><code class="JavaScript">let estilos = {
+ &#x9;color:&apos;red&apos;,
+ &#x9;backgroundColor:&apos;blue&apos;,
+ &#x9;fontWeight:&apos;bold&apos;
+ };
+
+let elemento = &lt;div style={estilos}&gt;teste&lt;/div&gt;;</code></pre>
+  </texto>
+</slide>
+
+<slide>
+  <titulo>JSX</titulo>
+  <texto style="padding-top:5px">
+ O atributo style tem um tratamento especial no JSX, permitindo definir estilos "inline", 
+ através de um objeto
+ <pre><code class="JavaScript">let estilos = {
+ &#x9;color:&apos;red&apos;,
+ &#x9;backgroundColor:&apos;blue&apos;,
+ &#x9;fontWeight:&apos;bold&apos;
+ };
+
+let elemento = &lt;div style={estilos}&gt;teste&lt;/div&gt;;</code></pre>
+Ou
+ <pre><code class="JavaScript">let elemento = &lt;div style={{
+           &#x9;color:&apos;red&apos;,
+           &#x9;backgroundColor:&apos;black&apos;,
+           &#x9;fontWeight:&apos;bold&apos;
+   }}&gt;teste&lt;/div&gt;;</code></pre>
+  </texto>
+</slide>
+
+
+<slide>
+  <titulo>JSX</titulo>
+  <texto style="padding-top:5px">
+    Os atributos do estilo utilizam a nomenclatura do DOM javaScript, que também é escrito no estilo camelCase
+ <ul>
+   <li>background-color => backgroundColor</li>
+   <li>list-style-image => listStyleImage</li>
+   <li>padding-right => paddingRight</li>
+   </ul>
+  </texto>
+</slide>
+
+
+<slide>
+ <titulo>JSX</titulo>
+ <texto style="padding-top:5px">
+Principais atributos de estilo no JSX
+ <pre><code class="html">background, backgroundAttachment, backgroundColor, backgroundImage,
+backgroundPosition, backgroundRepeat, border, borderBottom, 
+borderBottomColor, borderBottomStyle, borderBottomWidth, 
+borderColor, borderLeft, borderLeftColor, borderLeftStyle,
+borderLeftWidth, borderRight, borderRightColor, 
+borderRightStyle, borderRightWidth, borderStyle, borderTop, 
+borderTopColor, borderTopStyle, borderTopWidth, borderWidth, 
+clear, clip, color, cursor, display, filter, cssFloat, font, 
+fontFamily, fontSize, fontVariant, fontWeight, height, left, 
+letterSpacing, lineHeight, listStyle, listStyleImage, 
+listStylePosition, listStyleType, margin, marginBottom, 
+marginLeft, marginRight, marginTop, overflow, padding, 
+paddingBottom, paddingLeft, paddingRight, paddingTop, 
+pageBreakAfter, pageBreakBefore, position, strokeDasharray,
+strokeDashoffset, strokeWidth, textAlign, textDecoration, 
+textDecorationBlink, textDecorationLineThrough, textDecorationNone,
+textDecorationOverline, textDecorationUnderline, textIndent, 
+textTransform, top, verticalAlign, visibility, width, zIndex</code></pre>
+ </texto>
+</slide>
+
+
+
+<slide>
+  <titulo>state</titulo>
+  <texto style="padding-top:5px">
+ Representa o estado interno de um componente react, não sendo visível para outros componentes.
+ <ul>
+   <li>Normalmente inicializado no construtor</li>
+   <ul><li>Somente no construtor a inicialização do estado deve ser feita atribuindo um valor para o atributo state - this.state </li></ul>
+   <li>A alteração do estado fora do construtor só pode ser feita pelo método setState - this.setState(estadoNovo)</li>
+   <li>O valor do estado no componente pode ser acessado a qualquer momento pelo atributo state - this.state.valor</li>
+   </ul>
+  </texto>
+</slide>
+
+
+
+<slide>
+  <titulo>state</titulo>
+  <texto style="padding-top:5px">
+ <pre><code class="JavaScript">export default class ExemploEstado extends Component {
+  constructor() {
+    super();
+    this.state = { contador: 1 }; // inicializa o estado 
+    this.iniciaContagem();
+  }
+  iniciaContagem() {
+    let funcao = () => this.setState({
+      contador: this.state.contador + 1
+      // define um novo estado a partir do estado anterior 
+    });
+    setInterval(funcao, 1000); 
+    // executa a função a cada 1000 milesegundos (1 segundo)
+  }
+  render() {
+    return &lt;div&gt;Contagem:{this.state.contador}&lt;/div&gt;
+    // renderiza o componente a partir do estado 
+  }
+}</code></pre>
+</texto>
+</slide>
+
+
+<slide>
+ <titulo>state</titulo>
+ <texto style="padding-top:5px">
+ Ele não substitui o estado anterior pelo estado novo, mas funde os dois estados em um novo.
+<pre><code class="JavaScript">export default class ExemploEstado2 extends Component {
+  constructor() {
+   super();
+   this.state = {
+     nome: "João do Exemplo",
+     email: "joao@exemplo.com"
+   }; // inicializa o estado 
+   setTimeout(() => {
+     this.setState({
+       email: "joao@gmail.com"
+       // Vai gerar um novo estado: 
+       //{ nome: "João do Exemplo", email:"joao@gmail.com" }
+     })
+  }, 1000);
+ }
+...</code></pre>
+</texto>
+</slide>
+ 
+<slide>
+  <titulo>state</titulo>
+  <texto style="padding-top:5px">
+  setState é assíncrono, não há garantia de que o estado mude logo após sua chamada 
+ <pre><code class="JavaScript">export default class ExemploEstado3 extends Component {
+  constructor() {
+    super();
+    this.state = { contador: 1 }; // inicializa o estado 
+    setTimeout(()=>this.incrementa(),1000);
+  }
+  incrementa() {
+    this.setState({
+      contador: this.state.contador + 1
+    });
+    console.log(this.state.contador);
+    // pode gerar 1 ou 2 
+  }
+}</code></pre>
+ </texto>
+ </slide>
+
+<slide>
+  <titulo>state</titulo>
+  <texto style="padding-top:5px">
+  É possivel passar uma função que é chamada após o estado ser atualizado setState(estado, funcao)
+ <pre><code class="JavaScript">export default class ExemploEstado3 extends Component {
+  constructor() {
+    super();
+    this.state = { contador: 1 }; // inicializa o estado 
+    setTimeout(()=>this.incrementa(),1000);
+  }
+  incrementa() {
+    this.setState({
+      contador: this.state.contador + 1
+    }, ()=> {
+     console.log(this.state.contador);
+     // vai imprimir 2 
+    } );
+  }
+}</code></pre>
+</texto>
+</slide>
+
+<slide>
+  <titulo>state</titulo>
+  <texto style="padding-top:5px">
+  O mesmo problema pode ocorrer com multiplas alterações de estados 
+ <pre><code class="JavaScript">export default class ExemploEstado4 extends Component {
+  constructor() {
+    super();
+    this.state = { contador: 1 }; // inicializa o estado 
+    setTimeout(()=>this.incrementa3(),1000);
+  }
+  incrementa3() {
+    this.setState({contador: this.state.contador + 1});
+    this.setState({contador: this.state.contador + 1});
+    this.setState({contador: this.state.contador + 1});
+    // pode gerar 2,3 ou 4
+  }</code></pre>
+</texto>
+</slide>
+
+<slide>
+  <titulo>state</titulo>
+  <texto style="padding-top:5px">
+  É possível passar uma função como estado. 
+   Ela recebe o estado anterior como paramêtro e retorna o novo estado
+ <pre><code class="JavaScript">export default class ExemploEstado5 extends Component {
+  constructor() {
+    super();
+    this.state = { contador: 1 }; // inicializa o estado 
+    setTimeout(()=>this.incrementa3(),1000);
+  }
+  incrementa3() {
+   this.setState((estadoAnterior) => {
+     return { contador: estadoAnterior.contador + 1 }
+   });
+   this.setState((estadoAnterior) => {
+     return { contador: estadoAnterior.contador + 1 }
+   });
+   this.setState((estadoAnterior) => {
+     return { contador: estadoAnterior.contador + 1 }
+   });
+   // sempre vai gerar 4
+ }
+}</code></pre>
+</texto>
+</slide>
+
+
+
+
+<slide>
+  <titulo>state</titulo>
+  <texto style="padding-top:5px">
+  Também é possível recuperar as propriedades na função de mudança de estado:<br/>
+  setState((estadoAnterior, props) => {return novoEstao})
+ <pre><code class="JavaScript">export default class ExemploEstado6 extends Component {
+  constructor() {
+    super();
+    this.state = { contador: 0 }; // inicializa o estado 
+    setInterval(()=>this.incrementa(),1000);
+  }
+  
+  incrementa() {
+   this.setState((estadoAnterior, props) => {
+     return { contador: estadoAnterior.contador + props.salto}
+   });
+  }  
+ }
+}</code></pre>
+</texto>
+</slide>
+
+
+<slide>
+ <titulo>eventos</titulo>
+ <texto style="padding-top:5px">
+Através dos eventos o componente externaliza sua mudança de estado
+<ul>
+  <li>Componente pai envia uma função como paramêtro para componente filho</li>
+  <li>Quando o componente filho muda seu estado, ele notifica o pai chamando a função, passando como paramêtro o estado</li>
+  </ul>
+ </texto>
+</slide>
+
+
+<slide>
+  <titulo>eventos</titulo>
+  <texto style="padding-top:5px">
+ <pre><code class="JavaScript">export default class Contagem extends Component {
+  constructor() {
+    super();
+    this.state = { contador: 1, terminou: false };
+    setInterval(() =&gt; this.incrementa(), 1000);
+  }
+  incrementa() {
+    if (this.state.contador == this.props.limite) {
+      this.setState({chegou: true },
+      ()=&gt;{this.props.chegou(this.state.chegou)});
+    } else {
+      this.setState((estadoAnterior, props) =&gt; {
+        return { contador: estadoAnterior.contador+1}
+      });
+    }
+  }
+  render() {
+    return &lt;div&gt;Contagem:{this.state.contador}&lt;/div&gt;
+  }
+}</code></pre>
+</texto>
+</slide>
+
+<slide>
+ <titulo>eventos</titulo>
+ <texto style="padding-top:5px">
+<pre><code class="JavaScript">export default class ExemploEvento extends Component {
+  constructor() {
+    super();
+    this.state= { chegouExemplo:false };
+  }
+ render() {
+   if(this.state.chegouExemplo) 
+    return &lt;div&gt;
+      Finalizada a contagem: 
+      &lt;button onClick={()=&gt;this.setState({chegouExemplo:false})}&gt;
+        Reiniciar&lt;/button&gt;
+      &lt;/div&gt;;
+    else 
+      return &lt;Contagem limite={10} 
+        chegou={(valor)=&gt;this.setState({chegouExemplo:valor})} /&gt;;
+ }
+}</code></pre>
+</texto>
+</slide>
+
+
+<slide>
+  <titulo>eventos</titulo>
+  <texto style="padding-top:5px">
+ Eventos nativos são os oriundos dos elementos HTML 
+ <ul>
+   <li>São normalizados para evitar incompatibilidade entre navegadores</li>
+   <li>Também são escritos no estilo camelCase</li>
+   <ul>
+    <li>onclick => onClick</li>
+    <li>onchange => onChange</li>
+   </ul>
+  
+   <li>A função de callback recebe um objeto especializado da classe SyntheticEvent, 
+     contendo toda a informação do evento</li>
+   
+  </ul>
+  </texto>
+ </slide>
+ 
+
+ <slide>
+    <titulo>eventos</titulo>
+    <texto style="padding-top:5px">
+        Elementos básicos dos eventos
+   <pre><code class="JavaScript">boolean bubbles
+boolean cancelable
+DOMEventTarget currentTarget
+boolean defaultPrevented
+number eventPhase
+boolean isTrusted
+DOMEvent nativeEvent
+void preventDefault()
+boolean isDefaultPrevented()
+void stopPropagation()
+boolean isPropagationStopped()
+DOMEventTarget target
+number timeStamp
+string type</code></pre>
+<a href="https://reactjs.org/docs/events.html">
+  https://reactjs.org/docs/events.html</a>
+   </texto>
+   </slide>
+
+
+<slide>
+  <titulo>Campos de entrada</titulo>
+  <texto >
+      Campos de entrada nativos do HTML: &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt;, ... 
+      possuem um estado interno que não é controlado pelo react.<br/>Para evitar conflitos e 
+      produzir uma "única fonte de verdade" o react propõem que um componente pai gerencie este estado. Estes elementos são denominados componentes controlados.
+
+ <ul>
+   <li>Seu estado é definido somente pelas propriedades</li>
+   <li>Os eventos sugerem um novo estado, mas este estado tem que ser validado pelo componente pai</li>
+  </ul>
+  </texto>
+ </slide>
+
+
+ <slide>
+    <titulo>Campos de entrada</titulo>
+    <texto style="padding-top:5px">
+   <pre><code class="JavaScript">export default class ExemploComponenteControlado extends Component {
+  constructor() {
+    super();
+    this.state = { valor:&quot;&quot; };
+  }
+  setValor(valor) {
+    this.setState({
+        valor:valor
+    });
+  }
+  render() {
+    return &lt;div&gt;
+      &lt;label&gt;Valor:&lt;/label&gt;
+        &lt;input value={this.state.valor} 
+        onChange={(evento)=&gt;this.setValor(evento.target.value)} /&gt;
+        &amp;nbsp;Valor digitado({this.state.valor.length}):
+        {this.state.valor}
+      &lt;/div&gt;
+  }
+}</code></pre>
+</texto>
+</slide>
+
+<slide>
+  <titulo>Campos de entrada</titulo>
+  <texto style="padding-top:5px">
+    <img src="componenteControlado.png" />
+</texto>
+</slide>
+
+
+ <slide>
+    <titulo>Campos de entrada</titulo>
+    <texto style="padding-top:5px">
+   <pre><code class="JavaScript">export default class ExemploComponenteControlado2 
+      extends Component {
+    constructor() {
+        super();
+        this.state = { valor: &quot;&quot; };
+    }
+    setValor(valor) {
+        this.setState({
+            valor: valor.replace(/[^0-9]/g, &apos;&apos;)
+        });
+    }
+    render() {
+        return &lt;div&gt;
+            &lt;label&gt;Valor num&eacute;rico:&lt;/label&gt;
+            &lt;input value={this.state.valor}
+                onChange={(evento) =&gt; 
+                  this.setValor(evento.target.value)} /&gt;
+        &lt;/div&gt;
+    }
+}</code></pre>
+</texto>
+</slide>
+
+<slide>
+  <titulo>Campos de entrada</titulo>
+  <texto style="padding-top:5px">
+  O input checkbox html utiliza o atributo checked para definir seu estado
+ <pre><code class="JavaScript">export default class ExemploCheckBox extends Component {
+ ....
+    render() {
+        return &lt;span&gt;
+           &lt;input
+            id=&quot;memorizar&quot;
+            type=&quot;checkbox&quot;
+            checked={this.state.memorizar}
+            onChange={(evento) =&gt;
+                this.setMemorizar(evento.target.checked)} /&gt;
+            &lt;label htmlFor=&quot;memorizar&quot; &gt;Memorizar senha&lt;/label&gt;
+        &lt;/span&gt;
+    }
+}</code></pre>
+</texto>
+</slide>
+
+<slide>
+    <titulo>Campos de entrada</titulo>
+    <texto style="padding-top:5px">
+    O input radio segue o mesmo príncipio
+   <pre><code class="JavaScript">export default class ExemploRadio extends Component {
+....      
+  render() {
+      return &lt;div&gt;
+      &lt;label&gt;Sexo:&lt;/label&gt;&lt;br/&gt;
+      &lt;input type=&quot;radio&quot; 
+              id=&quot;sexo-masculino&quot;
+              checked={this.state.sexo == &apos;masculino&apos;} 
+              onChange={()=&gt;this.setSexo(&quot;masculino&quot;) } /&gt; 
+              &lt;label htmlFor=&quot;sexo-masculino&quot;&gt;Masculino&lt;/label&gt;
+              &lt;br/&gt;
+      &lt;input type=&quot;radio&quot; 
+              id=&quot;sexo-feminino&quot;
+              checked={this.state.sexo == &apos;feminino&apos;} 
+              onChange={()=&gt;this.setSexo(&quot;feminino&quot;) } /&gt;
+              &lt;label htmlFor=&quot;sexo-feminino&quot;&gt;Feminino&lt;/label&gt;
+              &lt;br/&gt;
+      &lt;/div&gt;
+  }</code></pre>
+  </texto>
+</slide>
+
+<slide>
+    <titulo>Campos de entrada</titulo>
+    <texto style="padding-top:5px">
+      No select o valor é definido pelo atributo value do option 
+   <pre><code class="JavaScript">export default class ExemploSelect extends Component {
+...
+    render() {
+      return &lt;span&gt;
+        &lt;label&gt;Sexo:&lt;/label&gt;
+        &lt;select value={this.state.sexo} 
+            onChange={(evento)=&gt;this.setSexo(evento.target.value)}&gt;
+          &lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+          &lt;option value=&quot;masculino&quot;&gt;Masculino&lt;/option&gt;
+          &lt;option value=&quot;feminino&quot;&gt;Feminino&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/span&gt;
+    }
+}</code></pre>
+  </texto>
+</slide>
+
+<slide>
+    <titulo>Campos de entrada</titulo>
+    <texto style="padding-top:5px">
+      No textarea o valor é um filho da tag
+   <pre><code class="JavaScript">export default class ExemploTextArea extends Component {
+  ....
+  render() {
+      return &lt;div&gt;
+          &lt;label &gt;Descri&ccedil;&atilde;o:&lt;/label&gt;&lt;br/&gt;
+          &lt;textarea onChange={(evento)=&gt;
+                this.setDescricao(evento.target.value)}&gt;
+              {this.state.descricao}
+          &lt;/textarea&gt;
+      &lt;/div&gt;
+  }
+  }</code></pre>
+  </texto>
+</slide>
+
+
+<slide>
+    <titulo>Campos de entrada</titulo>
+    <texto style="padding-top:5px">
+      Campos do HTML 5 podem ter variação do valor real e o que é exibido
+   <pre><code class="JavaScript">export default class ExemploInputHTML5 extends Component {
+....
+render() {
+  return &lt;div&gt;&lt;h2&gt;HTML 5&lt;/h2&gt;
+    &lt;label&gt; type=&quot;color&quot; =&gt;&lt;/label&gt;
+    &lt;input type=&quot;color&quot; value={this.state.color}
+        onChange={(evento) =&gt; this.setValor(&quot;color&quot;, evento.target.value)} /&gt;
+    &amp;nbsp;Valor real:{this.state.color}&lt;br /&gt;&lt;br /&gt;
+
+    &lt;label&gt; type=&quot;date&quot; =&gt;&lt;/label&gt;
+    &lt;input type=&quot;date&quot; value={this.state.date}
+        onChange={(evento) =&gt; this.setValor(&quot;date&quot;, evento.target.value)} /&gt;
+    &amp;nbsp;Valor real:{this.state.date}&lt;br /&gt;&lt;br /&gt;
+
+    &lt;label&gt; type=&quot;datetime-local&quot; =&gt;&lt;/label&gt;
+    &lt;input type=&quot;datetime-local&quot; value={this.state.datetimeLocal}
+        onChange={(evento) =&gt; this.setValor(&quot;datetimeLocal&quot;, evento.target.value)} /&gt;
+    &amp;nbsp;Valor real:{this.state.datetimeLocal}&lt;br /&gt;&lt;br /&gt;
+
+    &lt;label&gt; type=&quot;email&quot; =&gt;&lt;/label&gt;
+    &lt;input type=&quot;email&quot; value={this.state.email}
+        onChange={(evento) =&gt; this.setValor(&quot;email&quot;, evento.target.value)} /&gt;
+    &amp;nbsp;Valor real:{this.state.email}&lt;br /&gt;&lt;br /&gt;
+
+    &lt;label&gt; type=&quot;month&quot; =&gt;&lt;/label&gt;
+    &lt;input type=&quot;month&quot; value={this.state.month}
+        onChange={(evento) =&gt; this.setValor(&quot;month&quot;, evento.target.value)} /&gt;
+    &amp;nbsp;Valor real:{this.state.month}&lt;br /&gt;&lt;br /&gt;
+
+    &lt;label&gt; type=&quot;number&quot; =&gt;&lt;/label&gt;
+    &lt;input type=&quot;number&quot; value={this.state.number}
+        onChange={(evento) =&gt; this.setValor(&quot;number&quot;, evento.target.value)} /&gt;
+    &amp;nbsp;Valor real:{this.state.number}&lt;br /&gt;&lt;br /&gt;
+
+    &lt;label&gt; type=&quot;range&quot; =&gt;&lt;/label&gt;
+    &lt;input type=&quot;range&quot; value={this.state.range} min=&quot;0&quot; max=&quot;10&quot;
+        onChange={(evento) =&gt; this.setValor(&quot;range&quot;, evento.target.value)} /&gt;
+    &amp;nbsp;Valor real:{this.state.range}&lt;br /&gt;&lt;br /&gt;
+
+    &lt;label&gt; type=&quot;search&quot; =&gt;&lt;/label&gt;
+    &lt;input type=&quot;search&quot; value={this.state.search}
+        onChange={(evento) =&gt; this.setValor(&quot;search&quot;, evento.target.value)} /&gt;
+    &amp;nbsp;Valor real:{this.state.search}&lt;br /&gt;&lt;br /&gt;
+
+    &lt;label&gt; type=&quot;tel&quot; =&gt;&lt;/label&gt;
+    &lt;input type=&quot;tel&quot; value={this.state.tel}
+        onChange={(evento) =&gt; this.setValor(&quot;tel&quot;, evento.target.value)} /&gt;
+    &amp;nbsp;Valor real:{this.state.tel}&lt;br /&gt;&lt;br /&gt;
+
+    &lt;label&gt; type=&quot;time&quot; =&gt;&lt;/label&gt;
+    &lt;input type=&quot;time&quot; value={this.state.time}
+        onChange={(evento) =&gt; this.setValor(&quot;time&quot;, evento.target.value)} /&gt;
+    &amp;nbsp;Valor real:{this.state.time}&lt;br /&gt;&lt;br /&gt;
+
+    &lt;label&gt; type=&quot;url&quot; =&gt;&lt;/label&gt;
+    &lt;input type=&quot;url&quot; value={this.state.url}
+        onChange={(evento) =&gt; this.setValor(&quot;url&quot;, evento.target.value)} /&gt;
+    &amp;nbsp;Valor real:{this.state.url}&lt;br /&gt;&lt;br /&gt;
+
+    &lt;label&gt; type=&quot;week&quot; =&gt;&lt;/label&gt;
+    &lt;input type=&quot;week&quot; value={this.state.week}
+        onChange={(evento) =&gt; this.setValor(&quot;week&quot;, evento.target.value)} /&gt;
+    &amp;nbsp;Valor real:{this.state.week}&lt;br /&gt;&lt;br /&gt;
+&lt;/div&gt;</code></pre>
+  </texto>
+</slide>
+
+
+<slide>
+    <titulo>Formulário</titulo>
+    <texto style="padding-top:5px">
+      Criando um componente para controlar um formulário
+   <pre><code class="JavaScript">export default class ExemploFormulario extends Component {
+    constructor() {
+        super();
+        // inicializa os campos
+        this.state = {
+            nome: "",
+            sexo: "",
+            nascimento: "",
+            email: "",
+            notificacao: ""
+        };
+    }
+</code></pre>
+  </texto>
+</slide>
+
+
+<slide>
+    <titulo>Formulário</titulo>
+    <texto style="padding-top:5px">
+   <pre><code class="JavaScript">export default class ExemploFormulario extends Component {
+....
+render() {
+  return &lt;form onSubmit={(evento) =&gt; {
+    // Previne que o formul&aacute;rio fa&ccedil;a o submit
+    // trata o envio pelo m&eacute;todo enviar
+    evento.preventDefault(); this.enviar() }}
+      style={{
+          border: &quot;1px solid black&quot;,
+          padding: &quot;10px&quot;
+      }}
+  &gt;
+      &lt;label&gt;Nome:&lt;/label&gt;
+      &lt;input type=&quot;text&quot; value={this.state.nome} required
+          onChange={(evento) =&gt; this.setValor(&quot;nome&quot;, evento.target.value)} /&gt;
+      &lt;br /&gt;&lt;br /&gt;
+      &lt;label&gt;Sexo:&lt;/label&gt;
+      &lt;select value={this.state.sexo} required
+          onChange={(evento) =&gt; this.setValor(&quot;sexo&quot;, evento.target.value)}&gt;
+          &lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+          &lt;option value=&quot;masculino&quot;&gt;Masculino&lt;/option&gt;
+          &lt;option value=&quot;feminino&quot;&gt;Feminino&lt;/option&gt;
+      &lt;/select&gt;&lt;br /&gt;&lt;br /&gt;
+      &lt;label&gt;Nascimento:&lt;/label&gt;
+      &lt;input type=&quot;date&quot; value={this.state.nascimento}
+          onChange={(evento) =&gt; this.setValor(&quot;nascimento&quot;, evento.target.value)} /&gt;
+      &lt;br /&gt;&lt;br /&gt;
+      &lt;label&gt;E-mail:&lt;/label&gt;
+      &lt;input type=&quot;email&quot; value={this.state.email} required
+          onChange={(evento) =&gt; this.setValor(&quot;email&quot;, evento.target.value)} /&gt;
+      &lt;br /&gt;&lt;br /&gt;
+      &lt;input
+          id=&quot;notificacao&quot;
+          type=&quot;checkbox&quot;
+          checked={this.state.notificacao}
+          onChange={(evento) =&gt; this.setValor(&quot;notificacao&quot;, evento.target.checked)} /&gt;
+      &lt;label htmlFor=&quot;notificacao&quot; &gt;Receber notifica&ccedil;&atilde;o por e-mail &lt;/label&gt;
+      &lt;br /&gt;&lt;br /&gt;
+      &lt;button type=&quot;submit&quot;&gt;Cadastar&lt;/button&gt;
+  &lt;/form&gt;
+}</code></pre>
+  </texto>
+</slide>
+
+
+<slide>
+    <titulo>Formulário</titulo>
+    <texto style="padding-top:5px">
+   <pre><code class="JavaScript">export default class ExemploFormulario extends Component {
+....
+// função genérica para atribuir valores do estado
+setValor(campo, valor) {
+    this.setState(
+        (estadoAntigo) => {
+            estadoAntigo[campo] = valor;
+            return estadoAntigo;
+
+        });
+}</code></pre>
+  </texto>
+</slide>
+
+
+<slide>
+    <titulo>Formulário</titulo>
+    <texto style="padding-top:5px">
+   <pre><code class="JavaScript">export default class ExemploFormulario extends Component {
+....
+// função que notifica o componente pai
+// através da callback cadastrar
+enviar() {
+    let cadastro = {
+        nome: this.state.nome,
+        sexo: this.state.sexo,
+        nascimento: this.state.nascimento,
+        email: this.state.email,
+        notificacao: this.state.notificacao
+    };
+
+    this.props.cadastrar(cadastro);
+}</code></pre>
+  </texto>
+</slide>
+
+<slide>
+    <titulo>Formulário</titulo>
+    <texto style="padding-top:5px">
+     O componente pai recebe o item cadastrado pelo evento cadastrar 
+   <pre><code class="JavaScript">export default class ExemploFormularioPai extends Component {
+...
+  render() {
+    return &lt;div&gt;
+      &lt;ExemploFormulario 
+        cadastrar={(cadastro) =&gt; this.setCadastro(cadastro)} /&gt;
+      &lt;br/&gt; &lt;br/&gt;
+      {this.state.cadastro ?
+        &lt;div&gt;
+          Nome:{this.state.cadastro.nome}&lt;br /&gt;
+          Sexo:{this.state.cadastro.sexo}&lt;br /&gt;
+          Nascimento:{this.state.cadastro.nascimento}&lt;br /&gt;
+          E-mail:{this.state.cadastro.email}&lt;br /&gt;
+          Receber notifica&ccedil;&atilde;o? 
+          {this.state.cadastro.notificacao ? &quot;sim&quot; : &quot;n&atilde;o&quot;}&lt;br /&gt;
+        &lt;/div&gt;
+        : &quot;Nenhum cadastro enviado&quot;
+      }
+    &lt;/div&gt;
+  }
+}</code></pre>
+  </texto>
+</slide>
+
+<slide>
+    <titulo>Listas / arrays</titulo>
+    <texto style="padding-top:5px">
+     Para converter arrays em tags no JSX, normalmente é empregada a função map
+   <pre><code class="JavaScript">array.map(( elem, index, array ) => {
+    ...
+    // deve retornar o novo item do array na posição 
+});
+   </code></pre>
+   map() percorre o array da esquerda para a direita invocando a função de retorno em cada elemento. Para cada chamada de retorno, o valor devolvido se torna o elemento do novo array. Depois que todos os elementos foram percorridos, map() retorna o novo array com todos os elementos "traduzidos".
+  </texto>
+</slide>
+
+<slide>
+    <titulo>Listas / arrays</titulo>
+    <texto style="padding-top:5px">
+   <pre><code class="JavaScript">let a=[1,2,3,4,5];
+let b=a.map((valor) =>{return valor*2});<animacao>// b= [2, 4, 6, 8, 10]</animacao><animacao>
+let c=a.map((valor, indice) =>{return "pos:"+indice+"="+valor});
+<animacao>// c= ["pos:0=1", "pos:1=2", "pos:2=3", "pos:3=4", "pos:4=5"]</animacao></animacao>
+<animacao>let d=a.map((valor, indice) =&gt;{return &lt;li&gt;{indice} - {valor}&lt;/li&gt;});
+  <animacao>//[&lt;li&gt;0 - 1&lt;/li&gt;, &lt;li&gt;1 - 2&lt;/li&gt;, &lt;li&gt;2 - 3&lt;/li&gt;
+//, &lt;li&gt;3 - 4&lt;/li&gt;, &lt;li&gt;4 - 5&lt;/li&gt;]</animacao></animacao></code></pre>
+  </texto>
+</slide>
+
+
+<slide>
+  <titulo>Listas / arrays</titulo>
+  <texto style="padding-top:5px">
+ <pre><code class="JavaScript">export default class ExemploLista extends Component {
+constructor() {
+super();
+this.state = {
+  meses:[&quot;janeiro&quot;, &quot;fevereiro&quot;, &quot;mar&ccedil;o&quot;, &quot;abril&quot;, &quot;maio&quot;, &quot;junho&quot;,
+  &quot;julho&quot;, &quot;agosto&quot;, &quot;setembro&quot;, &quot;outubro&quot;, &quot;novembro&quot;, &quot;dezembro&quot;]
+};
+}
+
+render() {
+return (
+  &lt;ul&gt;
+  {this.state.meses.map((mes) =&gt; { return &lt;li&gt;{mes}&lt;/li&gt; })}
+  &lt;/ul&gt;
+);
+}
+}</code></pre>
+</texto>
+</slide>
+
+<slide>
+  <titulo>Listas / arrays</titulo>
+  <texto style="padding-top:5px">
+ <pre><code class="JavaScript">export default class ExemploLista extends Component {
+constructor() {
+super();
+this.state = {
+  meses: [&quot;janeiro&quot;, &quot;fevereiro&quot;, &quot;mar&ccedil;o&quot;, &quot;abril&quot;, &quot;maio&quot;, &quot;junho&quot;, &quot;julho&quot;, &quot;agosto&quot;, &quot;setembro&quot;, &quot;outubro&quot;, &quot;novembro&quot;, &quot;dezembro&quot;]
+};
+}
+render() {
+let lista = [];
+for (let x = 0; x &lt; this.state.meses.length; x++) {
+  let mes = &lt;li&gt;{this.state.meses[x]}&lt;/li&gt;;
+  lista.push(mes);
+}
+return (
+  &lt;ul&gt;
+  {lista}
+  &lt;/ul&gt;
+);
+}
+}</code></pre>
+</texto>
+</slide>
+
+<slide>
+  <titulo>Listas / arrays</titulo>
+  <texto style="padding-top:5px">
+ <pre><code class="JavaScript">export default class ExemploLista extends Component {
+constructor() {
+super();
+this.state = {
+  meses:[&quot;janeiro&quot;, &quot;fevereiro&quot;, &quot;mar&ccedil;o&quot;, &quot;abril&quot;, &quot;maio&quot;, &quot;junho&quot;,
+  &quot;julho&quot;, &quot;agosto&quot;, &quot;setembro&quot;, &quot;outubro&quot;, &quot;novembro&quot;, &quot;dezembro&quot;]
+};
+}
+
+render() {
+return (
+  &lt;ul&gt;
+  {this.state.meses.map((mes) =&gt; &lt;li&gt;{mes}&lt;/li&gt;)}
+  &lt;/ul&gt;
+);
+}
+}</code></pre>
+</texto>
+</slide>
+
+<slide>
+  <titulo>Listas / arrays</titulo>
+  <texto style="padding-top:5px">
+ <pre><code class="JavaScript">export default class ExemploLista2 extends Component {
+ constructor() {
+  super();
+  this.state = {   contatos: [
+     {id:1, nome:&quot;Jo&atilde;o do Exemplo&quot;, email:&quot;joao@exemplo.com&quot;},
+     {id:2, nome:&quot;Maria do Exemplo&quot;, email:&quot;maria@exemplo.com&quot;},
+     {id:3, nome:&quot;Enzo do Exemplo&quot;, email:&quot;enzo@exemplo.com&quot;}
+    ]};
+ }
+ render() {
+  return (&lt;table&gt;
+    &lt;tr&gt;&lt;th&gt;Nome&lt;/th&gt;&lt;th&gt;E-mail&lt;/th&gt;&lt;/tr&gt;
+    {this.state.contatos.map((contato) =&gt;
+      &lt;tr key={contato.id}&gt;
+        &lt;td&gt;{contato.nome}&lt;/td&gt;
+        &lt;td&gt;{contato.email}&lt;/td&gt;
+      &lt;/tr&gt;)}
+    &lt;/table&gt;
+  );
+ }
+}
+</code></pre>
+</texto>
+</slide>
+
+<slide>
+    <titulo>Listas / arrays</titulo>
+    <texto >
+        Keys ajudam o React a identificar qual elemento foi adicionado/removido de uma lista/array. 
+        Uma Key deve sempre ser um valor único entre todos os possíveis elementos da lista. 
+    </texto>
+</slide>
+  
+
+<slide>
+  <titulo>Ciclo de vida</titulo>
+  <texto >
+      Métodos que serão executados em determinados momentos da vida de um componente. <br/><br/>
+      Dividido em 3 fases:
+      <ul>
+          <li>Criação</li>
+          <li>Atualizações</li>
+          <li>Destruição</li>
+       </ul>
+  </texto>
+</slide>
+
+<slide>
+    <titulo>Ciclo de vida</titulo>
+    <texto style="padding-top:5px; text-align: center">
+      <img src="lifecycle.png" />
+  </texto>
+  </slide>
+  
+<slide>
+  <titulo>Ciclo de vida</titulo>
+  <texto>
+    <b>constructor(props)</b>
+    <ul>
+      <li>Método construtor do componente, executado logo quando o componente é instanciado. </li>
+      <li>Normalmente, é utilizado para definir o estado inicial do componente.</li>
+      <li>Recebe como parâmetro as propriedades do componente (props)</li>
+      <li>O construtor da classe pai deve ser chamado na inicialização (super).</li>
+    </ul>
+  </texto>
+</slide>
+
+<slide>
+  <titulo>Ciclo de vida</titulo>
+  <texto>
+    <b>render()</b>
+    <ul>
+      <li>Define a aparência e comportamento do componente a partir de sua propriedade e estado </li>
+      <li>Normalmente*, é chamado toda vez que uma alteração nas propriedades ou estado do componente é realizada</li>
+      <li>Não pode alterar o estado ou executar eventos</li>
+      <li>Pode retornar:</li>
+      <ul>
+        <li>Componente, elemento JSX, string, números, boleanos, portais e null</li>
+      </ul>
+    </ul>
+  </texto>
+</slide>
+
+
+<slide>
+  <titulo>Ciclo de vida</titulo>
+  <texto>
+    <b>componentDidMount()</b>
+    <ul>
+      <li>Método que é executado após a montagem do componente no DOM</li>
+      <li>É executado uma vez em um ciclo de vida de um componente e será após a primeira renderização</li>
+      <li>Local recomendado para fazer qualquer processo assíncrono, como chamadas ao servidor e inscrição em serviços</li>
+    </ul>
+  </texto>
+</slide>
+
+
+<slide>
+  <titulo>Ciclo de vida</titulo>
+  <texto>
+    <b>componentWillUnmount()</b>
+    <ul>
+      <li>Método que é executado antes do componente ser destruído</li>
+      <li>Utilizado para desinscrição em serviços, liberação de recursos e cancelamento de requisições</li>
+    </ul>
+  </texto>
+</slide>
+
+
+
+<slide>
+  <titulo>Ciclo de vida</titulo>
+  <texto style="padding-top:5px">
+ <pre><code class="JavaScript">export default class ExemploEstado extends Component {
+  constructor() {
+    super();
+    this.state = {
+      contador: 1
+    };
+  }
+
+  componentDidMount() {
+    let funcao = () => this.setState({
+      contador: this.state.contador + 1
+    });
+    this.interval = setInterval(funcao, 1000);
+
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+</code></pre>
+</texto>
+</slide>
+
+
+<slide>
+  <titulo>Ciclo de vida</titulo>
+  <texto>
+    <b>shouldComponentUpdate(proximoProps, proximoState)</b>
+    <ul>
+      <li>Método que determina se o componente deve realizar o render novamente ou não</li>
+      <li>Recebe a próxima propriedade e o próximo estado como parâmetro </li>
+      <li>Comparando com as propriedades e estados atuais (this.props e this.state), retornando true ou false, para notificar se
+        o componente necessita de atualização</li>
+      <li>Busca melhorar a performance do componente</li>
+    </ul>
+  </texto>
+</slide>
+
+
+<slide>
+  <titulo>Ciclo de vida</titulo>
+  <texto>
+    <b>getSnapshotBeforeUpdate(prevProps, prevState)</b>
+    <ul>
+       <li>Método que executa antes de uma atualização ocorrer</li>
+      <li>Utilizado para buscar informações da DOM antes das alterações ocorrerem</li>
+      <li>O valor retornado por este método é enviado ao componentDidUpdate que é o ciclo executado na sequência</li>
+    </ul>
+  </texto>
+</slide>
+
+<slide>
+  <titulo>Ciclo de vida</titulo>
+  <texto>
+    <b>componentDidUpdate(prevProps, prevState, snapshot)</b>
+    <ul>
+        <li>Método que executa logo após uma atualização ocorrer</li>
+      <li>Utilizado para executar ajustes no DOM a partir do snapshot </li>
+    </ul>
+  </texto>
+</slide>
+  
+
+<slide>
+    <titulo>Ciclo de vida</titulo>
+    <texto>
+      <b>componentDidCatch(error, info)</b>
+      <ul>
+         <li>Método que captura erros ocorridos durante o ciclo de vida do componente</li>
+      </ul>
+    </texto>
+  </slide>
+
+
+  <slide>
+    <titulo>Ciclo de vida</titulo>
+    <texto style="padding-top:5px">
+   <pre><code class="JavaScript">export default class ExemploErroDiv extends Component {
+      render() {
+        return &lt;div&gt;{this.state.naoTem}&lt;/div&gt;
+      }
+    }
+export default class ExemploErro extends Component {
+    ....
+componentDidCatch(erro, info) {     
+   this.setState({erro:erro,info:info });
+ }
+ render() {
+   if (this.state.erro) {
+     return &lt;h1&gt;Erro:{this.state.erro.toString()} &lt;/h1&gt;;
+   } else {
+     return &lt;div&gt; Contagem:
+       {this.state.contador&lt;5?this.state.contador:&lt;ExemploErroDiv/&gt;}
+    &lt;/div&gt;
+   } 
+ }
+  </code></pre>
+  </texto>
+  </slide>
+
+
+
+<slide>
+    <titulo>Ciclo de vida</titulo>
+    <texto>
+      <b>static getDerivedStateFromProps(nextProps, prevState)</b>
+      <ul>
+         <li>Método que executa na criação do componente e na atualização de suas propriedades</li>
+         <li>Utilizado quando o estado deriva de sua propriedades</li>
+         <li>Retorna as mudança no estado ou null caso não tenha mudança</li>
+      </ul>
+    </texto>
+</slide>
+
+
+
+
+<slide>
+    <titulo>Ciclo de vida</titulo>
+    <texto style="padding-top:5px">
+   <pre><code class="JavaScript">export default class ExemploFormulario extends Component {
+  constructor() {
+      super();
+      this.state = {
+          nome: "", sexo: "", nascimento: "",
+          email: "",  notificacao: ""
+      };}
+  static getDerivedStateFromProps(nextProps, prevState) {
+      if (nextProps.cadastro) {
+          return {
+              nome: nextProps.cadastro.nome,
+              sexo: nextProps.cadastro.sexo,
+              nascimento: nextProps.cadastro.nascimento,
+              email: nextProps.cadastro.email,
+              notificacao: nextProps.cadastro.notificacao
+          }
+      }
+      return null;
+  }</code></pre>
+  </texto>
+  </slide>
+
+</body>
+</html>

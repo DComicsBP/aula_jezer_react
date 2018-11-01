@@ -1,0 +1,206 @@
+body
+  {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  background:black;
+  height:100%;
+  margin:0px;
+  padding:0px;
+  border:0px;
+  overflow:hidden;
+  }
+
+apresentacao
+  {
+  margin: auto;
+  text-align:center;
+  height:100%;
+  width:100%;
+  vertical-align:middle;
+  }
+
+   .capa
+	{
+	background-image:url("capa.jpg");
+	}
+
+materia
+	{
+  margin: auto;
+  padding-top:250px;
+  padding-left:150px;
+  font-size:50px;
+  font-weight:bold; color:#154446;
+  display:block;
+	}
+
+aula
+	{
+	margin: auto;
+	padding-top:40px;
+	padding-left:150px;
+	font-size:40px;
+	font-style:italic;
+	color:#154446;
+	display:block;
+	}
+dados
+	{
+	margin: auto;
+	padding-top:30px;
+	padding-left:150px;
+	font-size:40px;
+	color:#154446;
+	display:block;
+	}
+
+
+slide
+  {
+  position: relative;
+  top: 50%;
+   -webkit-transform: translateY(-50%);
+
+  transform: translateY(-50%);
+  margin: auto;
+  background:url("fundo.jpg");
+  width:1000px;
+  height:751px;
+  text-align:left;
+  display:none;
+  vertical-align:middle;
+  }
+
+animacao
+  {
+  display:none;
+  }
+
+titulo
+  {
+  margin: auto;
+  background-image:url("separador.png");
+  background-size:465px 5px;
+  background-position:left bottom;
+  background-repeat: no-repeat;
+  padding-top:40px;
+  padding-left:30px;
+  font-size:50px;
+  font-weight:bold;
+  color:#154446;
+  padding-bottom:5px;
+  display:block;
+  }
+
+texto
+  {
+  margin: auto;
+  display:block;
+  padding-top:40px;
+  padding-left:40px;
+  padding-rigth:20px;
+  font-size:35px;
+  }
+
+pequeno
+	{
+	font-size:30px;
+	}
+
+questao
+	{
+	 position: relative;
+	top: 25%;
+	font-size:45px;
+	font-style:italic;
+	font-weight:bold;
+	transform: translateY(-25%);
+	margin:auto;
+	text-align:center;
+	vertical-align:middle;
+	display:block;
+	width:100%;
+	}
+
+
+
+  ol,
+  ul {
+      list-style-position: inside;
+      margin-top:20px;
+    	margin-bottom:20px;
+  }
+
+  li {
+      list-style-type: none;
+      list-style-position: inside;
+      padding: 10px 10px 10px 20px;
+      text-indent: -1em;
+  }
+
+  ol {
+      counter-reset: ol; //reset the counter for every new ol
+  }
+
+  ul li:before {
+          content: '\25CF \00a0'; //bullet unicode followed by 3 non breakable spaces
+  }
+
+  ol li:before {
+          counter-increment: ol;
+          content: counter(ol) '.\00a0  \00a0'; //css counter followed by a dot and 3 non breakable spaces
+  }
+
+  ul ul li:before {
+          content: '\25CB \00a0'; //bullet unicode followed by 3 non breakable spaces
+  }
+
+/*
+
+li{
+ list-style-position: inside;
+   padding: 10px 10px 10px 20px;
+   text-indent: -1em;
+}
+
+ul{
+list-style-position: inside;
+	list-style-type: disc;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+ul ul
+	{
+	list-style-type: circle;
+	margin-top:0px;
+	margin-bottom:10px;
+	}
+
+*/
+
+pre{margin:2px; font-size:25px;}
+
+paginacao
+	{
+	position:absolute;
+	bottom: 30px;
+	right: 300px;
+	color:#154446;
+	font-size:25px;
+	font-weight:bold;
+	}
+
+timeline
+	{
+	position:absolute;
+	border: 0px solid black;
+	bottom: 35px;
+	right:48px;
+	font-weight:bold;
+	}
+
+video
+{
+	height:500px; margin-left:100px;
+
+}
