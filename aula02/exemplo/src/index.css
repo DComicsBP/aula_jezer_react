@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  background-color: black;
+  margin-bottom: 20px;
+}
+
+nav ul li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-right: 1px white solid;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.selecionado {
+  text-decoration: underline;
+font-weight: bolder;
+
+
+}
