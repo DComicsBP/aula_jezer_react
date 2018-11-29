@@ -13,7 +13,7 @@ export default class ExemploErro extends Component {
   }
 
   componentDidMount() {
-    let funcao = () => this.setState({
+    let funcao = () => this .setState({
       contador: this.state.contador + 1
     });
     this.interval = setInterval(funcao, 1000);
