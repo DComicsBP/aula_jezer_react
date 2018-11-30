@@ -13,7 +13,8 @@ export default class Cadastro extends Component{
     }
 
     enviar(){
-        this.props.onAdicionar
+        // this.props.onAdicionar()
+        
     }
     render(){
         return(
